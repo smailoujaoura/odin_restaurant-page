@@ -7,7 +7,7 @@ const viewsDiv = document.querySelector(".views");
 
 function render(view, path = "/") {
 	viewsDiv.innerHTML = view;
-	history.pushState({ path }, "", BASE + path);
+	history.pushState({ path }, "", GITHUB_BASE + path);
 
 	viewsDiv.querySelector(".gohome").addEventListener("click", () => render(homeView, "/"));
 
