@@ -1,20 +1,19 @@
 import "./styles.css"
 import { homeView, menuView, aboutView } from "./views.js"
 
+const GITHUB_BASE = "/odin_restaurant-page";
+
 const viewsDiv = document.querySelector(".views");
 
 function render(view, path = "/") {
 	viewsDiv.innerHTML = view;
-	history.pushState({ path }, "", path);
+	history.pushState({ path }, "", BASE + path);
 
-	const homeBtn = viewsDiv.querySelector(".gohome")
-		.addEventListener("click", () => render(homeView, "/"));
+	viewsDiv.querySelector(".gohome").addEventListener("click", () => render(homeView, "/"));
 
-	const menuBtn = viewsDiv.querySelector(".gomenu")
-		.addEventListener("click", () => render(menuView, "/menu"));
+	viewsDiv.querySelector(".gomenu").addEventListener("click", () => render(menuView, "/menu"));
 	
-	const aboutBtn = viewsDiv.querySelector(".goabout")
-		.addEventListener("click", () => render(aboutView, "/about"));
+	viewsDiv.querySelector(".goabout").addEventListener("click", () => render(aboutView, "/about"));
 }
 
 window.addEventListener("popstate", (e) => {
