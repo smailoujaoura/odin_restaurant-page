@@ -1,13 +1,13 @@
 import "./styles.css"
 import { homeView, menuView, aboutView } from "./views.js"
 
-const GITHUB_BASE = "/odin_restaurant-page";
+// const GITHUB_BASE = "/odin_restaurant-page";
 
 const viewsDiv = document.querySelector(".views");
 
 function render(view, path = "/") {
 	viewsDiv.innerHTML = view;
-	history.pushState({ path }, "", GITHUB_BASE + path);
+	history.pushState({ path }, "", /* GITHUB_BASE +*/ path);
 
 	viewsDiv.querySelector(".gohome").addEventListener("click", () => render(homeView, "/"));
 
