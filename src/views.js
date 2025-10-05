@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Restaurant</title>
-</head>
-<body>
-	<div class="views">
-	</div>
-</body>
-</html>
-
-<!-- HOME VIEW -->
-<!-- <div class="home">
+export const homeView = `
+<div class="home">
 			<header>
 				<div class="logo">The Golden Spoon</div>
 				<nav class="navbar">
-					<button>Home</button>
-					<button>Menu</button>
-					<button>About</button>
+					<button class="gohome">Home</button>
+					<button class="gomenu">Menu</button>
+					<button class="goabout">About</button>
 				</nav>
 				<div class="order">
 					<button class="order__online">Order Online</button>
@@ -37,17 +24,17 @@
 			<footer>
 				<div class="footer">&copy; The Golden Spoon. All Rights Reserved.</div>
 			</footer>
-</div> -->
+</div>
+`;
 
-
-<!-- MENU VIEW -->
-<!-- <div class="menu">
+export const menuView = `
+<div class="menu">
 	<div class="header">
 		<div class="logo">The Golden Spoon</div>
 		<div class="navbar">
-			<button>Home</button>
-			<button>Menu</button>
-			<button>About</button>
+			<button class="gohome">Home</button>
+			<button class="gomenu">Menu</button>
+			<button class="goabout">About</button>
 		</div>
 	</div>
 	<div class="main">
@@ -83,16 +70,17 @@
 		<div class="notice">All prices are subject to change without notice.</div>
 		<div class="rights">&copy; The Golden Spoon. All Rights Reserved.</div>
 	</div>
-</div> -->
+</div>
+`;
 
-<!-- ABOUT VIEW -->
-<!-- <div class="about">
+export const aboutView = `
+<div class="about">
 	<div class="header">
 		<div class="logo">The Golden Spoon</div>
 		<div class="navbar">
-			<button>Home</button>
-			<button>Menu</button>
-			<button>About</button>
+			<button class="gohome">Home</button>
+			<button class="gomenu">Menu</button>
+			<button class="goabout">About</button>
 		</div>
 	</div>
 	<div class="main">
@@ -129,4 +117,5 @@
 		<div class="logo">The Golden Spoon</div>
 		<div class="rights">&copy; The Golden Spoon. All Rights Reserved.</div>
 	</div>
-</div> -->
+</div>
+`;
