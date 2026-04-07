@@ -32,18 +32,18 @@ The app uses a single mount point (`.views`) and injects one view at a time (`ho
 ```mermaid
 flowchart TD
     A[Browser loads bundle.js] --> B[main.js bootstraps app]
-    B --> C[render(homeView, '/')]
+    B --> C[Initial home render]
     C --> D[Inject HTML into .views]
     D --> E[Attach nav button listeners]
     E --> F{User action}
-    F -->|Click Home| G[render(homeView, '/')]
-    F -->|Click Menu| H[render(menuView, '/menu')]
-    F -->|Click About| I[render(aboutView, '/about')]
-    G --> J[pushState updates URL]
+    F -->|Click Home| G[Render Home view]
+    F -->|Click Menu| H[Render Menu view]
+    F -->|Click About| I[Render About view]
+    G --> J[Update browser history]
     H --> J
     I --> J
-    J --> K[Back/Forward triggers popstate]
-    K --> L[Restore view from e.state.path]
+    J --> K[Back or Forward triggers popstate]
+    K --> L[Restore view from saved path]
 ```
 
 ## Key Implementation Notes
